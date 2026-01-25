@@ -2,9 +2,9 @@ name: Daily Horoscope Scraper
 
 on:
   schedule:
-    - cron: "30 19 * * *"
-   # Every day 2:30 AM IST
+    - cron: "*/5 * * * *"
   workflow_dispatch:
+
 
 jobs:
   scrape:
