@@ -65,13 +65,18 @@ def scrape_rasi(item):
     }
 
 def upload_to_s3(data):
-    s3 = boto3.client("s3", region_name="eu-north-1")
+    s3 = boto3.client(
+        "s3",
+        region_name=" eu-north-1"  # MUST match bucket region
+    )
+
     s3.put_object(
-        Bucket=BUCKET_NAME,
-        Key=S3_KEY,
+        Bucket="sahasra2026week",
+        Key="telcal_Week.json",
         Body=json.dumps(data, ensure_ascii=False, indent=2),
         ContentType="application/json"
     )
+
 
 def main():
     output = []
