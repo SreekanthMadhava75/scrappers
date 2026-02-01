@@ -67,7 +67,7 @@ def scrape_rasi(item):
 def upload_to_s3(data):
     s3 = boto3.client(
         "s3",
-        region_name=" eu-north-1"  # MUST match bucket region
+        region_name="eu-north-1"  # MUST match bucket region
     )
 
     s3.put_object(
