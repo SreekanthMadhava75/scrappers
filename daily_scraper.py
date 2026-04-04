@@ -95,6 +95,7 @@ import time
 import boto3
 from datetime import datetime
 
+
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"
 }
@@ -115,6 +116,7 @@ RASI_URLS = [
     ("Pisces", "మీనం రాశి", "https://www.astrosage.com/telugu/rasi-phalalu/meena-rasi-phalalu.asp")
 ]
 
+# added some changes 
 def clean_text(text):
     return "\n".join(line.strip() for line in text.split("\n") if line.strip())
 
